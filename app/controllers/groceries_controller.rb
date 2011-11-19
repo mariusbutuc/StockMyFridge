@@ -16,7 +16,7 @@ class GroceriesController < ApplicationController
 		params[:ingredients].each do |i|
 			res = RestClient.get api_url, {:params => {:command => 'PRODUCTSEARCH', :searchtext => i, :page => 1, :sessionkey => session_key}}
 			pro = JSON.parse(res)
-			products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'] }
+			products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad') }
 		end
 		
 		respond_with(products)
