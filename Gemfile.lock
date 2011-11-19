@@ -36,7 +36,6 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    cocaine (0.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     highline (1.6.2)
@@ -93,7 +92,6 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
-  cocaine
   nokogiri
   rails (= 3.0.9)
   rest-client
