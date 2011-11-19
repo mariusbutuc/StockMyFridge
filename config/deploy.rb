@@ -4,7 +4,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt from git
 set :repository, "git@github.com:mariusbutuc/StockMyFridge.git"  # Your clone URL
 set :branch, "master"
 set :scm, "git"
-set :scm_verbose, true
+#set :scm_verbose, true
 set :user, "root"              # The server's user for deploys
 set :scm_passphrase, "r3dhat^" # The deploy user's password
 
