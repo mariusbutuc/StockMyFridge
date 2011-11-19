@@ -1,3 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+	API_KEY = 'stokfridge'
+	
+	protect_from_forgery
 end
