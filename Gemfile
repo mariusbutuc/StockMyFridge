@@ -4,3 +4,4 @@ gem 'sqlite3'
 
 gem 'rest-client'
 gem 'nokogiri'
+gem 'json'

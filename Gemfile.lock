@@ -77,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   nokogiri
   rails (= 3.0.9)
   rest-client
