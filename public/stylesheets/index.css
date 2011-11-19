@@ -1,0 +1,58 @@
+body {
+    background: url(../images/wood-background.jpg) no-repeat;
+    color: #808080;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: #333;
+    display: block;
+    opacity: 0.8;
+}
+
+.description {
+    padding-left: 40px;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 50px;
+}
+
+.wrapper a {
+    display: block;
+}
+
+.wrapper img {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.tag-line {
+    padding-left: 7px;
+}
+
+.wrapper p {
+    width: 390px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.signup {
+    margin-top: 40px;
+    display:inline-block;
+    width: 390px;
+    padding: 5px;
+}
+
+.footer {
+    width:inherit;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+}
