@@ -1,24 +1,33 @@
 /**** RECIPE ****/
 
-#recipe table { border-collapse:collapse;display:inline-block;margin:0 auto;width:441px }
+#recipe { margin-left:100px }
+
+#recipe table { border-collapse:collapse;display:inline-block;min-height:400px;width:441px }
+
+/* backgrounds */
+.paperLeft { background:url('/images/final-paper-mid.png') repeat-y }
+.paperCentre { background:#f5f5f5 }
+.paperRight { background:url('/images/final-paper-mid.png') repeat-y top right }
 
 /* bars */
 .barTop { height:2px;text-align:center;width:100% }
+.barTop td { background:url('/images/final-paper-mid.png') repeat-y }
 
 .barBottom { height:4px;text-align:center;width:100% }
-.barBottom td { padding:10px 0 5px }
+.barBottom td { background:url('/images/final-paper-mid.png') repeat-y;padding:10px 0 5px }
 
 /* header */
 #recipe thead { color:#6079bb;font-size:20px;font-style:italic }
 #recipe thead tr { background:url('/images/final-paper-top.png');height:70px }
 
 /* body */
-#recipe tbody tr { background:url('/images/final-paper-mid.png') repeat-y }
 #recipe tbody th { color:#6079bb;font-size:20px;font-style:italic;font-weight:normal;padding;5px 0 }
 
 #recipe tbody .checkbox { padding-left:40px;width:30px }
-#recipe tbody .product  { width:300px }
-#recipe tbody .amount   { padding-right:20px;text-align:right;width:50px }
+#recipe tbody .product  { width:290px }
+#recipe tbody .amount   { padding-right:30px;text-align:right;width:50px }
+
+#recipe td.push { background:url('/images/final-paper-mid.png') repeat-y;min-height:100px }
 
 /* footer */
 #recipe tfoot tr { background:url('/images/final-paper-bottom.png');height:47px }
@@ -26,4 +35,4 @@
 
 /**** PEN ****/
 
-#pen { background:url('/images/pen2.png');display:inline-block;height:488px;width:407px }
+#pen { background:url('/images/pen.png');display:inline-block;height:480px;margin-left:50px;width:200px }
