@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+	respond_to :html, :json
+	
 	def show
 		@recipe = Recipe.find(params[:id])
 	end
@@ -78,10 +80,12 @@ class RecipesController < ApplicationController
 			# Skip this ingredient if nothing could be found.
 			next if pro['Products'].blank?
 			
-			@products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad') }
+			@products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad'), :image => pro['Products'][0]['ImagePath'] }
 		end
 		
-		render :partial => 'recipe'
+		respond_with(@products) do |format|
+			format.html { render :partial => 'recipe' }
+		end
 	end
 	
 	private
