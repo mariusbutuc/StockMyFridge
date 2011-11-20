@@ -2,7 +2,7 @@ body {
     background: url(../images/wood-background.jpg) repeat;
     color: #808080;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -10,31 +10,15 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    max-width: 900px;
+    max-width: 940px;
     border-radius: 10px;
     background-color: #333;
     display: block;
     opacity: 0.8;
 }
 
-.description {
-    padding-left: 40px;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 50px;
-}
-
-.wrapper a {
-    display: block;
-}
-
 .wrapper img {
     margin-top: 10px;
-    padding: 0;
-}
-
-.tag-line {
-    padding-left: 7px;
 }
 
 .wrapper p {
@@ -43,11 +27,101 @@ body {
     padding-right:5px;
 }
 
+.header {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.header a {
+    padding-left: 20px;
+    display: inline-block;
+    width: 200px;
+}
+.social {
+    display: block;
+    padding-left: 200px;
+    float: right;
+    margin-top: 60px;
+}
+
+.social div {
+    display: block;
+    width:100px;
+    padding-bottom: 5px;
+}
+
+.social a {
+    display: block;
+}
+
+/* GPlus */
+#plusone {
+    display: block;
+}
+
+.description {
+    padding-left: 40px;
+    display: inline-block;
+    padding-right: 50px;
+    vertical-align: top;
+}
+
+.description ul {
+    list-style-type: none;
+    margin-left: -38px;
+    width: 400px;
+}
+
+.description li {
+    background: url(../images/icon-checkmark.png) no-repeat;
+    padding-left: 40px;
+    height: 44px;
+    font-size: 22px;
+}
+
 .signup {
-    margin-top: 40px;
     display:inline-block;
     width: 390px;
-    padding: 5px;
+    vertical-align: top;
+}
+
+
+.steps {
+    margin-top: 25px;
+    padding-left: 40px;
+    display: block;
+}
+
+.step-1 {
+    display: inline-block;
+    background: url(../images/step1.png) no-repeat;
+    width: 313px;
+    height: 240px;
+}
+
+.step-2 {
+    display: inline-block;
+    margin-left: -30px;
+    background: url(../images/step2.png) no-repeat;
+    width: 313px;
+    height: 240px;
+}
+
+.step-3 {
+    display: inline-block;
+    margin-left: -30px;
+    background: url(../images/step3.png) no-repeat;
+    width: 313px;
+    height: 240px;
+}
+
+.steps p {
+    font-size: 40px;
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 230px;
+    color: #697DBD;
 }
 
 .footer {

@@ -8,28 +8,75 @@
 </head>
 <body>
     <div class="wrapper">
+      <div class="header">
+        <%= link_to image_tag("logo.png", :alt => "Stok Fridge?"), root_path %>
+        <div class="social">
+            <div id="fb-root"></div>
+          <!-- Place this tag where you want the +1 button to render -->
+
+            <!-- Place this render call where appropriate -->
+            <script type="text/javascript">
+              // GPlus
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+
+            // FB
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=204111079664457";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            </script>
+
+            <div class="fb-like" data-href="http://www.facebook.com/pages/StokFridge/203059976435688" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="stokfridge.com" data-text="Simplifying Grocery Shopping" data-count="horizontal" data-via="StokFridge">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+            <div><g:plusone size="medium"></g:plusone></div>
+        </div>
+      </div>
       <div class="description">
-          <%= link_to image_tag("logo.png", :alt => "Stok Fridge?"), root_path %>
-          <p>Found the recipes you want online? Click on the StokFridge button located on the same page, and voila! A grocery list of ingredients and total costs customized to your local grocers will be provided for you!</p>
+        <ul>
+          <li>Easy meal planning for the week!</li>
+          <li>Prepare shopping list in minutes!</li>
+          <li>Manage budget while shopping!</li>
+          <li>Smart and healthy lifestyle!</li>
+          <li>Drag <a href="javascript:if (window.location.origin.indexOf('allrecipes') != -1) {ings=document.getElementsByClassName('ingredient'); name = document.getElementsByClassName('itemreviewed')[0].innerHTML; data = ''; for (i = 0;i<ings.length;i++){data += 'ingredients[]=' + ings.item(i).innerHTML.trim() + '&';} if (data != '') { window.location = 'http://stokfridge.com/groceries.json?api_key=stokfridge&name='+name+'&'+data;}} else {alert('Not a supported website!');}" alt="Stok Your Fridge!">
+                <%= image_tag "bookmark.png", :alt => "Stok Fridge", :height => "20px" %></a> to your bookmark to use us anywhere!</li>
+        </ul>
       </div>
       <div class="signup">
         <script type="text/javascript">
 var _ntzrq=[['setProgramId', 'lYNFq'], ['load']]; (function() { var d = document, h = d.getElementsByTagName('head')[0], s = d.createElement('script'); d.write('<div id="enthuzr-widget"></div>'); s.type = 'text/javascript'; s.async = true; s.src = 'http://widgets.enthuzr.com/0.4/widget.js'; h.appendChild(s); })();
 </script>
+      </div>
+
+      <div class="steps">
+        <div class="step-1">
+          <p>
+            FIND RECIPES ONLINE
+          </p>
         </div>
+        <div class="step-2">
+          <p>
+            CREATE GROCERY LIST
+          </p>
+        </div>
+        <div class="step-3">
+          <p>
+            ORDER FROM STORE
+          </p>
+        </div>
+      </div>
       <div class="footer">
-		  <div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) {return;}
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=230002495035";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		  <div class="fb-like" data-href="http://www.facebook.com/pages/StokFridge/203059976435688?ref=ts&amp;sk=wall" data-send="false" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
         <p>&copy Copyright StokFridge 2011-2012</p>
       </div>
     </div>
+
+  <!-- Google Analytics -->
   <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-27145989-1']);
