@@ -4,7 +4,6 @@
 		
 		// Create recipe with given name and ingredients.
 		params = window.location.search.slice(1);
-		console.log(params);
 		
 		$.post('/recipes', params, function(data) {
 			// Stop spinner.
