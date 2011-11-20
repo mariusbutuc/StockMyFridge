@@ -1,0 +1,29 @@
+<h1>Ingredients for Recipe</h1>
+
+<% total = 0 %>
+
+<table>
+	<tr>
+		<th>Ingredient</th>
+		<th>Amount</th>
+	</tr>
+	
+	<% @products.each do |product| %>
+		<tr>
+			<td><%= product[:name] %></td>
+			<td><%= number_to_currency(product[:price]) %></td>
+		</tr>
+		
+		<% total += product[:price] %>
+	<% end %>
+	
+	<tfoot>
+		<th>Total</th>
+		<th><%= number_to_currency(total) %></th>
+	</tfoot>
+</table>
+
+<div id="recipes">
+	<% @recipes.each do |recipe| %>
+	<% end %>
+</div>
