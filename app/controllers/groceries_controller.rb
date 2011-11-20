@@ -3,8 +3,8 @@ class GroceriesController < ApplicationController
 	
 	def index
 		# The API key must be present and match the key provided by Enthuzr.
-		return head(400) if params['apiKey'].blank?
-		return head(401) if params['apiKey'] != API_KEY
+		return head(400) if params['api_key'].blank?
+		return head(401) if params['api_key'] != API_KEY
 		
 		# The list of ingredients must be present.
 		return head(400) if params['ingredients'].blank?
