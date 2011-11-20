@@ -36,7 +36,7 @@ class GroceriesController < ApplicationController
 		params[:ingredients] = eclair
 =end
 		
-#		recipe = Recipe.create(:name => params[:name])
+		@recipe = Recipe.create(:name => params[:name])
 		
 		params[:ingredients].each do |i|
 			# remove everything that's between parenthesis
@@ -65,9 +65,12 @@ class GroceriesController < ApplicationController
 				ingredient = fancy_ingredient.split(' ').last(2).join(' ')
 			end
 			
-			logger.info "amount = #{amount}; ingredient = #{ingredient}"
+			logger.info "Ingredient: amount = #{amount}; unit = #{unit_of_measurement}; name = #{ingredient}"
 			
-			res = RestClient.get api_url, {:params => {:command => 'PRODUCTSEARCH', :searchtext => i, :page => 1, :sessionkey => session_key}}
+			# Create the ingredient and attach it to the recipe.
+			@recipe.ingredients.create(:amount => amount, :name => i)
+			
+			res = RestClient.get api_url, {:params => {:command => 'PRODUCTSEARCH', :searchtext => ingredient, :page => 1, :sessionkey => session_key}}
 			pro = JSON.parse(res)
 			
 			# Skip this ingredient if nothing could be found.
@@ -76,12 +79,9 @@ class GroceriesController < ApplicationController
 			@products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad') }
 		end
 		
-		cookies['recipes'] = "^#{@products.to_json}"
-		@recipes = cookies['recipes']
-		
 		respond_with(@products) do |format|
-      format.html
-    end
+			format.html
+		end
 	end
 	
 	private
