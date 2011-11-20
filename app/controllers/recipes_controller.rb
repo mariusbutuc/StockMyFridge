@@ -97,6 +97,12 @@ class RecipesController < ApplicationController
 		end
 	end
 	
+	def destroy
+	  @recipe = Recipe.find(params[:id])
+	  @recipe.destroy
+	  redirect_to :controller => "recipes", :action => "index"
+  end
+	
 	private
 	
 	# Login to the system and retrieve the session key.
