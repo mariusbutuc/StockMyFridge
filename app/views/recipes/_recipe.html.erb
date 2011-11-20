@@ -7,7 +7,7 @@
 		</tr>
 	</thead>
 	
-	<tbody>
+	<tbody class="middle">
 		<tr class="barTop">
 			<td colspan="3">
 				<%= image_tag 'bar-top.png' %>
@@ -16,9 +16,9 @@
 		
 		<% @products.each do |product| %>
 			<tr>
-				<td class="checkbox"><%= image_tag 'checkbox.png' %></td>
-				<td class="product"><%= product[:name] %></td>
-				<td class="amount"><%= number_to_currency(product[:price]) %></td>
+				<td class="checkbox paperLeft"><%= image_tag 'checkbox.png' %></td>
+				<td class="product paperCentre"><%= product[:name] %></td>
+				<td class="amount paperRight"><%= number_to_currency(product[:price]) %></td>
 			</tr>
 			
 			<% total += product[:price] %>
@@ -31,8 +31,12 @@
 		</tr>
 		
 		<tr>
-			<th colspan="2">Total</th>
-			<th class="amount"><%= number_to_currency(total) %></th>
+			<th class="paperLeft" colspan="2">Total</th>
+			<th class="amount paperRight"><%= number_to_currency(total) %></th>
+		</tr>
+		
+		<tr>
+			<td class="push" colspan="3">&nbsp;</td>
 		</tr>
 	</tbody>
 	
@@ -41,4 +45,4 @@
 	</tfoot>
 </table>
 
-<!--<div id="pen"></div>-->
+<div id="pen"></div>
