@@ -83,8 +83,9 @@ class RecipesController < ApplicationController
 			@products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad'), :image => pro['Products'][0]['ImagePath'] }
 		end
 		
-		respond_with(@products) do |format|
+		respond_to do |format|
 			format.html { render :partial => 'recipe' }
+			format.json { render :json => @products.to_json }
 		end
 	end
 	
