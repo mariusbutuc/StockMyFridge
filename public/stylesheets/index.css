@@ -32,7 +32,6 @@ img {
 }
 
 .header {
-    display: block;
     padding-bottom: 10px;
 }
 
@@ -41,29 +40,29 @@ img {
     padding-left: 20px;
     width: 200px;
 }
+
 .social {
-    float:right;
-    padding-top: 40px;
+    float: right;
+    margin-top: 80px;
     padding-right: 20px;
+    width:100px;
 }
 
-.social div {
+.clear {
+    clear: both;
+}
+
+.social-element {
     display: block;
     width:100px;
     padding-bottom: 5px;
 }
 
-.social a {
-    display: block;
-}
 
 #googleplus {
     margin-top: 3px;
 }
 /* GPlus */
-#plusone {
-    display: block;
-}
 
 #linkedin {
     width: 50px;
