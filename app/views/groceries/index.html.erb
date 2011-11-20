@@ -1,11 +1,12 @@
-<h1>Ingredients for Recipe</h1>
-
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		// Load spinner.
 		
 		// Create recipe with given name and ingredients.
-		$.post('/recipes', window.location.search, function(data) {
+		params = window.location.search.slice(1);
+		console.log(params);
+		
+		$.post('/recipes', params, function(data) {
 			// Stop spinner.
 			
 			// Add recipe to the document.
