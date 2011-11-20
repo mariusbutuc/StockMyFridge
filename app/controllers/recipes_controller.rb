@@ -46,6 +46,10 @@ class RecipesController < ApplicationController
 			# remove everything that's between parenthesis
 			while i.gsub!(/\([^()]*\)/,""); end
 			
+			# strip words that appear after a comma or dash at the end of the ingredient
+			# eg. A small onion, chopped
+			while i.gsub!(/[,-]\s*[^,-]+$/, ''); end
+			
 			# capture fraction
 			# http://stackoverflow.com/questions/245345/regex-to-match-sloppy-fractions-mixed-numbers/245351#245351
 			given_amount = i.match('^(\d+(?! */))? *-? *(?:(\d+) */ *(\d+))?')
