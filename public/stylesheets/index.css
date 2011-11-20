@@ -54,6 +54,9 @@ body {
     display: block;
 }
 
+#googleplus {
+    margin-top: 3px;
+}
 /* GPlus */
 #plusone {
     display: block;
