@@ -9,5 +9,19 @@ db/schema.rb
 log/*.log
 tmp/
 
+.DS_Store
 .rvmrc.*
 .idea/*
+
+
+config/database.yml
+*.log
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store
+.project
+.sass-cache/

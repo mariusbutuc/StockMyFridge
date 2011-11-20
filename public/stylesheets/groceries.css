@@ -22,3 +22,24 @@
 {
 	align: left;
 }
+
+#loading {
+    display: none;
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#loading img {
+    display: inline-block;
+}
+
+#loading p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0 0 20px;
+}
+
+.clear {
+    clear: both;
+}
