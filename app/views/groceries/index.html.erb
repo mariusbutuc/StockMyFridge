@@ -1,18 +1,25 @@
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		// Load spinner.
+		$('#loading').show();
 		
 		// Create recipe with given name and ingredients.
 		params = window.location.search.slice(1);
-		console.log(params);
 		
 		$.post('/recipes', params, function(data) {
 			// Stop spinner.
-			
+			$('#loading').hide();
+
 			// Add recipe to the document.
 			$('#recipe').html(data);
 		});
 	});
 </script>
 
-<div id="recipe"></div>
+<div id="recipe">
+  <div id="loading">
+    <%= image_tag('loading.gif', :alt => 'Loading...') %>
+    <p>Hold on to your fridge for a moment,<br /> we're finding the best prices for your ingredients.</p>
+    <div class="clear"></div>
+  </div>
+</div>
