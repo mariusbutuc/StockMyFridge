@@ -10,8 +10,8 @@
 	
 	<% @products.each do |product| %>
 		<tr>
-			<td><%= product[:name] %></td>
-			<td><%= number_to_currency(product[:price]) %></td>
+			<td class="item"><%= product[:name] %></td>
+			<td class="price"><%= number_to_currency(product[:price]) %></td>
 		</tr>
 		
 		<% total += product[:price] %>
