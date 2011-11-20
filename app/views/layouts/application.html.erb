@@ -7,8 +7,18 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div class="wrapper">
+      <div class="description">
+        <%= link_to image_tag("logo.png", :alt => "Stok Fridge?"), root_path %>
+      </div>
+      <div class="content">
+		<%= yield %>
+	  </div>	
+      <div class="footer">
+        <p>&copy Copyright StokFridge 2011-2012</p>
+      </div>
+    </div>
 
-<%= yield %>
 
 </body>
 </html>

@@ -13,7 +13,7 @@ class GroceriesController < ApplicationController
 		
 		api_url = 'http://www.techfortesco.com/groceryapi/RESTService.aspx'
 		session_key = get_session_key
-		products = []
+		@products = []
 		
 =begin
 		eclair = [
@@ -35,6 +35,8 @@ class GroceriesController < ApplicationController
 		]
 		params[:ingredients] = eclair
 =end
+		
+#		recipe = Recipe.create(:name => params[:name])
 		
 		params[:ingredients].each do |i|
 			# remove everything that's between parenthesis
@@ -71,10 +73,15 @@ class GroceriesController < ApplicationController
 			# Skip this ingredient if nothing could be found.
 			next if pro['Products'].blank?
 			
-			products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad') }
+			@products << { :id => pro['Products'][0]['ProductId'], :name => pro['Products'][0]['Name'], :price => pro['Products'][0]['Price'].exchange('gbp', 'cad') }
 		end
 		
-		respond_with(products)
+		cookies['recipes'] = "^#{@products.to_json}"
+		@recipes = cookies['recipes']
+		
+		respond_with(@products) do |format|
+      format.html
+    end
 	end
 	
 	private
