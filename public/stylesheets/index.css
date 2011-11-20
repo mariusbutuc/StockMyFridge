@@ -5,6 +5,10 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+img {
+	border: 0;
+}
+
 .wrapper {
     margin-top: 60px;
     margin-left: auto;
