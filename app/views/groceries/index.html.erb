@@ -7,8 +7,8 @@
 		params = window.location.search.slice(1);
 		
 		$.post('/recipes', params, function(data) {
-            $('#loading').hide();
 			// Stop spinner.
+			$('#loading').hide();
 
 			// Add recipe to the document.
 			$('#recipe').html(data);
@@ -18,7 +18,7 @@
 
 <div id="recipe">
   <div id="loading">
-    <%= image_tag('loading.gif', alt: 'Loading...') %>
+    <%= image_tag('loading.gif', :alt => 'Loading...') %>
     <p>Hold on to your fridge for a moment,<br /> we're finding the best prices for your ingredients.</p>
     <div class="clear"></div>
   </div>
