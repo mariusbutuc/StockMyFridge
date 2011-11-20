@@ -1,0 +1,24 @@
+.header {
+	width:inherit;
+    margin-left: auto;
+	vertical-align: top;
+	display: inline-block;
+    margin-right: 40px;
+    padding-left: 40px;
+}
+
+.content {
+	width:inherit;
+    margin-left: auto;
+    margin-right: 40px;
+    padding-left: 40px;
+}
+
+.price {
+	align: right;
+}
+
+.item
+{
+	align: left;
+}
