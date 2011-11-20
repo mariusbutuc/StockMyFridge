@@ -1,13 +1,22 @@
+.DS_Store
+*~
 *.bak
 *.cache
 *.log
 *.pid
 *.sw?
 .bundle
+.project
+.sass-cache/
+config/database.yml
 db/*.sqlite3
 db/schema.rb
+doc/api
+doc/app
 log/*.log
 tmp/
+tmp/**/*
+tmp/*
 
 .rvmrc.*
 .idea/*
